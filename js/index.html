@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>smolinski</title>
+
+
+<!--[if IE 8]>
+    <style>
+       <link type="text/css" href="http://jeffsmolinski.com" media="all"
+rel="stylesheet">
+    </style>
+<![endif]-->
+
+
+<script src="js/detectmobilebrowser.js"></script>
+<script src="js/detectbrowsersize.js"></script>
+<script src="js/jkl-parsexml.js" type="text/javascript"></script>
+
+<script src="js/audio.min.js"></script>
+
+<script type='text/javascript' src='js/greensock/TweenMax.min.js'></script>
+<script type='text/javascript' src='js/greensock/easing/EasePack.min.js'></script>
+<script type='text/javascript' src='js/greensock/plugins/CSSPlugin.min.js'></script>
+
+<script type='text/javascript' src='js/trackCursor.js'></script>
+
+<script src="js/speak/speak.js-master/speakClient.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/site.css" />
+
+
+<!--[if IE 8]>
+    <style>
+        .ie8 {display:block;}
+
+    </style>
+    <![endif]-->
+
+<script>
+<!--
+    var xml = new JKL.ParseXML( "content.xml" );
+    var data = xml.parse();
+    //document.write( data["items"]["item"]["us_state"] );
+    //document.write( data.items.item[1].filename );
+// -->
+</script>
+
+<script>
+	// audio player
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+  
+  function readyAudioJs() {
+    var as = audiojs.createAll();
+  }
+</script>
+
+<style>
+
+
+body {
+	
+	background-color:#6cb4f2;
+	margin:0 auto;
+	padding:0px;
+	height:100%;
+	max-height:100%;
+	
+	background-image: url('images/bg.gif');
+}
+
+.headerFont {
+	
+	/* font-family: 'Loved by the King', cursive, fantasy;*/
+	font-family: 'Yesteryear', cursive;
+	font-size:10em;
+	color:transparent;
+	opacity:1; 
+	line-height:1em;
+	text-shadow: 0 0 10px #aaacac;
+}
+
+
+.headerFont3 {
+	
+	/* font-family: 'Loved by the King', cursive, fantasy;*/
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size:7em;
+	color:transparent;
+	opacity:1; 
+	line-height:1em;
+	text-shadow: 0 0 10px #aaacac;
+}
+.headerFont2 {
+	
+	/* font-family: 'Loved by the King', cursive, fantasy;*/
+	font-family: 'Yesteryear', cursive;
+	font-size:5em;
+	color:#fff;
+	opacity:1; 
+	line-height:1em;
+}
+
+.headerFont4 {
+	
+	/* font-family: 'Loved by the King', cursive, fantasy;*/
+	font-family: 'Loved by the King', cursive;
+	font-size:3em;
+	color:#000;
+	opacity:1; 
+	line-height:1em;
+}
+
+.headerFont5 {
+	
+	/* font-family: 'Loved by the King', cursive, fantasy;*/
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size:3em;
+	color:#333;
+	opacity:1; 
+	line-height:.1em;
+}
+
+.headerFont6 {
+	
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size:.9em;
+	color:#444;
+	opacity:1; 
+	line-height:.1em;
+}
+
+a {
+	color:#fff;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#ccc;
+	text-decoration: none;
+}
+
+
+.holderDiv {
+	
+	position:absolute;
+	display:inline-block;
+	width:240px;
+	height:120px;
+	opacity:1;
+	
+}
+
+
+.innerHolderDiv {
+	
+	position:absolute;
+	background-color:#ddd;
+	opacity:1;
+	top:0px:
+	left:0px;
+	border:0px solid #666;
+	
+	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.86);
+	-moz-box-shadow:    0px 0px 30px rgba(50, 50, 50, 0.86);
+	box-shadow:         0px 0px 30px rgba(50, 50, 50, 0.86);/**/
+	
+	/*-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;*/
+	
+}
+
+.myImageThumb {
+	
+	opacity:1;
+	
+}
+
+
+.displayImageClass {
+	opacity:0;
+	padding:20px;
+	pointer-events:none;
+	text-shadow: 0 0 10px #000;
+}
+
+.myContentFont {
+	
+	font-family: 'Carme', sans-serif;
+	font-size: .9em;
+	color:rgba(0,0,0,1);
+	line-height: 1.4em;
+	
+}
+
+.popupDiv {
+	
+	-webkit-box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.86);
+	-moz-box-shadow:    0px 0px 30px rgba(50, 50, 50, 0.86);
+	box-shadow:         0px 0px 30px rgba(50, 50, 50, 0.86);
+}
+
+</style>
+
+
+<script language="javascript" type="text/javascript">
+	
+	var snd_drop = new Audio("audio/drop_sfx.mp3");
+	var snd_reverse = new Audio("audio/drop_reverse_sfx.mp3");
+	var snd_jet = new Audio("audio/jet_sfx.mp3");
+	var snd_tap = new Audio("audio/tap_sfx.mp3");
+	var snd_laser = new Audio("audio/laser_sfx.mp3");
+	
+	function openLink(num) 
+	{
+		window.open(data.items.item[num].linkPath,'_blank');
+	}
+	
+	function showImage (obj){
+		//console.log('asdasdasdas'+obj.id);
+		
+		TweenMax.to(obj, .2, {css:{alpha:1}, ease:Power3.easeOut, overwrite:"all"});
+		
+		//var tween = createjs.Tween.get(obj.).to({alpha:1}, 1000, createjs.Ease.elasticInOut(.5));
+		
+	}
+	
+	
+	function moveToMouse (){
+		
+		var obj = document.getElementById("jet");
+		
+		//jetMoveXX = new Tween(obj.style,'left',eval(Tween.strongEaseOut),parseInt(obj.style.left),cursorX-150,3,'px');
+		//jetMoveXXX = new Tween(obj.style,'top',eval(Tween.strongEaseOut),parseInt(obj.style.top),cursorY-490,3,'px');
+		
+		TweenMax.to(obj, 1.2, {css:{left:cursorX-150, top:cursorY-490}, ease:Power3.easeOut, overwrite:"all"});
+		
+	}
+	
+	
+	function imageRollOver (obj){
+		
+		moveToMouse();
+		
+		//console.log(obj.id);
+		var i = obj.id.substr(16);
+		//console.log(i);
+		tempT = parseInt(obj.style.top)-1;
+		tempL = parseInt(obj.style.left)-1;
+		obj.style.top = tempT + "px";
+		obj.style.left = tempL + "px";
+		TweenMax.to(obj, .4, {css:{backgroundColor:"#ffffff"}, ease:Power3.easeOut, overwrite:"all"});
+		
+		
+		snd_tap.play();
+		
+	}
+	
+	function imageRollOut (obj){
+		//var tween = createjs.Tween.get(obj.firstChild.firstChild).to({alpha:.5}, 1000, createjs.Ease.elasticInOut(.5));
+		//TweenMax.to(obj.firstChild.firstChild, .2, {css:{alpha:.5}, ease:Power3.easeInOut, overwrite:"all"});
+		var i = obj.id.substr(7);
+		tempT = parseInt(obj.style.top)+1;
+		tempL = parseInt(obj.style.left)+1;
+		obj.style.top = tempT + "px";
+		obj.style.left = tempL + "px";
+		TweenMax.to(obj, .4, {css:{backgroundColor:"#dddddd"}, ease:Power3.easeOut, overwrite:"all"});
+		
+	}
+	
+	function closeButtonRollOver (obj){
+		//var tween = createjs.Tween.get(obj).to({alpha:1}, 1000, createjs.Ease.elasticInOut(.5));
+		//TweenMax.to(obj, .2, {css:{left:'1px'}, ease:Power3.easeInOut, overwrite:"all"});
+		
+		TweenMax.to(obj, .2, {css:{alpha:1}, ease:Power3.easeInOut, overwrite:"all"});
+	}
+	
+	function closeButtonRollOut (obj){
+		//var tween = createjs.Tween.get(obj).to({alpha:.5}, 1000, createjs.Ease.elasticInOut(.5));
+		//TweenMax.to(obj, .2, {css:{left:'1p'}, ease:Power2.easeInOut, overwrite:"all"});
+		
+		//var xxxx = new OpacityTween(obj,Tween.strongEaseOut,parseInt(obj.style.opacity*100),30,.300);
+		
+		//xxxx.start();
+		TweenMax.to(obj, .2, {css:{alpha:.4}, ease:Power3.easeInOut, overwrite:"all"});
+	}
+	
+	function openDisplay(obj){
+		
+		var element = document.getElementById('audioSpeak');
+		element.innerHTML = "";
+		
+		injectImage(obj);
+		
+		//var element = obj.parentNode;
+		//element.parentNode.removeChild(element);
+		
+		obj.parentNode.innerHTML = '<img src="images/skull.png" width="82px" height="114px" border="0" style="position:absolute;top:16px;left:70px;" />';
+		
+		/*var i = obj.id.substr(16);
+		var tempObj = document.getElementById("myImage"+i);
+		TweenMax.to(tempObj, .5, {css:{alpha:.2,backgroundColor:"#000000"}, ease:Power3.easeInOut});
+		*/
+		var tempObj = document.getElementById("myDisplayDiv");
+		tempObj.style.display = "block";
+		TweenMax.to(tempObj, .5, {css:{alpha:1}, delay:1, ease:Power3.easeInOut});
+		
+		var tempObj = document.getElementById("displayContentBlock");
+		tempObj.style.opacity = 0;
+		TweenMax.to(tempObj, .5, {css:{alpha:1}, delay:1.5, ease:Power3.easeInOut});
+		
+		var tempObj = document.getElementById("jet");
+		TweenMax.to(tempObj, 1, {css:{left:parseInt(tempObj.style.left)-400,top:parseInt(tempObj.style.top)+2000}, ease:Power3.easeIn, onComplete:resetJet});
+		
+		//tempObj.style.display = "block";
+		//tempObj.style.opacity = 1;
+		//TweenMax.to(tempObj, .4, {css:{alpha:1}, ease:Power3.easeInOut});
+		//var tween = createjs.Tween.get(tempObj).set({display:'block'}).set({opacity:0}).to({alpha:1}, 1000);
+		
+		snd_laser.play();
+		snd_jet.play();
+		
+	}
+	
+	function closeDisplay(){
+		
+		//console.log("asdasd");
+		var tempObj = document.getElementById("displayContentBlock");
+		TweenMax.to(tempObj, .5, {css:{alpha:0}, ease:Power3.easeInOut, overwrite:"all"});
+		
+		var tempObj = document.getElementById("myDisplayDiv");
+		TweenMax.to(tempObj, .5, {css:{alpha:0}, ease:Power3.easeInOut, delay:0.3, onComplete:makeDisplayNone, overwrite:"all"});
+		
+		
+		snd_drop.play();
+	}
+	
+	function resetJet(){
+		
+		var temp = document.getElementById("jet");
+		temp.style.top = -1580+'px';
+		temp.style.left = 250+'px';
+		
+	}
+	
+	function makeDisplayNone(){
+		var tempAP = document.getElementById('audioPlayer');
+		tempAP.parentNode.removeChild(tempAP);
+		
+		var tempObj = document.getElementById("myDisplayDiv");
+		tempObj.style.display = 'none';
+		
+	}
+	
+	function getRealImageDimensions (img){
+		//alert(img.id + " - "+img.className);
+		var realWidth = img.attr("naturalWidth");
+		var realHeight = img.attr("naturalHeight");
+		
+		img.height = realHeight;
+		img.width = realWidth;
+	}
+	
+	var tempSpeakArray = Array();
+	tempSpeakArray[0] = "Welcome to my portfolio site. Please enjoy.";
+	tempSpeakArray[1] = "Welcome to my portfolio site, Home-e.";
+	tempSpeakArray[2] = "Welcome to my portfolio site. Prepare to Ride the Lightning.";
+	tempSpeakArray[3] = "Welcome to my portfolio site. There is no better way, to spend your day.";
+	tempSpeakArray[4] = "Welcome to my portfolio site. The cake is a lie.";
+	tempSpeakArray[5] = "Welcome to my portfolio site. ";
+	
+	function saySomething(){
+		
+		var tempNum = Math.floor(Math.random()*5);
+		//console.log("tempNum "+tempNum);
+		speak(tempSpeakArray[tempNum],{ pitch: 50, speed:175, amplitude:30, wordgap:0});
+	}
+	
+	function injectImage(obj){
+		
+		var tempItemNumber = obj.id.substr(16);
+		var tempObj = document.getElementById('displayContentBlock');
+		tempObj.innerHTML = "<div id='popupID' class='popupDiv' style='position:absolute;background:#fff;width:760px;margin-top:40px;text-align:center;border:0px solid red;top:0px;left:" + (myWindowWidth-760)/2 + "px;'><img id='displayImageId' src='images/matted/" + data.items.item[tempItemNumber].filename + "' border='0' class='displayImageClass' onload='showImage(this)' style='width:720px;height:480px;position:relative;z-index:0;'><div class='headerFont5' style='padding:20px;text-align:left;position:relative;'>" + data.items.item[tempItemNumber].title + "</div><div style='margin-left:20px;margin-top:10px;position:relative;border:0px solid red;'><audio id='audioPlayer' src='"+ data.items.item[tempItemNumber].audioPath +"' preload='auto' /></div><div class='myContentFont' style='padding:20px;padding-top:10px;width:640px;text-align:left;position:relative;z-index:3;'>" + data.items.item[tempItemNumber].content + "</div><div id='linkButton' style='position:absolute;z-index:300;right:20px;top:520px;cursor:pointer;background:#6cb4f2;padding:0px;margin:0px;opacity:.4;padding-right:1px;' onmouseover='closeButtonRollOver(this)' onmouseout='closeButtonRollOut(this)' onclick='openLink("+tempItemNumber+")'><img src='images/arrow.png' border='0' width='50' height='50'></div><div class='headerFont5' style='position:absolute; z-index:301; right:20px;top:580px;padding:17px;padding-top:20px; padding-bottom:30px;cursor:pointer;background:#6cb4f2;color:#fff;opacity:.4;' onmouseover='closeButtonRollOver(this)' onmouseout='closeButtonRollOut(this)' onclick='closeDisplay()' >x</div></div>";
+		
+		readyAudioJs();
+	}
+	
+	var posArrayX = new Array();
+	var posArrayY = new Array();
+	
+	
+	function drawThumbs(){
+		
+		var temp = "";
+		var tempPosX = 20;
+		var tempPosY = 20;
+		
+		for (var i = 0; i < data.items.item.length; i++) {
+			if(tempPosX >= 980){
+				tempPosX = 20;
+				tempPosY += 170;
+				
+			}
+			temp += "<div id='myHolderDiv"+ i +"' class='holderDiv'  style='left:"+ tempPosX +"px;top:"+ tempPosY +"px;'><div id='myInnerHolderDiv"+ i +"' class='innerHolderDiv' style='cursor:pointer;top:0px;left:0px;padding:10px;padding-bottom:30px;' onmouseover='imageRollOver(this)' onmouseout='imageRollOut(this)' onclick='openDisplay(this)' ontouchstart='imageRollOver( this )' ontouchend='imageRollOut( this )'><img id='myImage"+ i +"' class='myImageThumb' src='images/thumbs/" + data.items.item[i].thumb + "' width='200px' height='100px' style='pointer-events:none;'/><div class='headerFont6' style='position:absolute;bottom:14px;left:10px;pointer-events:none;'>"+ (i+1) +"</div></div></div>\n";
+			
+			posArrayX[i] = tempPosX;
+			posArrayY[i] = tempPosY;
+			// console.log("temp[op] "+temp.oPoint.x);
+			
+			tempPosX += 250;
+			
+		}/**/
+		
+		document.getElementById("main").innerHTML = temp;
+	}
+	
+	
+	
+</script>
+
+
+</head>
+
+<body>
+	
+	<div class="ie8" style="display:block;position:absolute;top:0px;left:0px;height:100%;width:100%;background: #ffffff;color:#000000;z-index: 1000;">If you have to be attemping to view this site in Internet Explorer 8, follow these steps to proceed with success: 1. Power down your laptop. 2. Stand up and firmly hold it out with your arms fully extended. 3. Swing the laptop vigorously down towards the ground. 4. At the same time thrust your knee up into the device's under carriage. Apply enough force to wrap the alluminum frame around your knee. If you do not hear the inner components snapping into pieces, simply repeat steps 1 thru 4. Congratulations. You have permanently resolved your Internet Explorer 8 issues.</div>
+	<!--<div class="headerFont2" style="position: absolute;top:0px;left:0px;cursor:default;padding:150px;z-index:11px;">&nbsp;Smolinski</div>
+	<div id="myButtonDiv" style="position: absolute;top:-150px;left:-150px;cursor:default;padding:150px;z-index:220;"><a href="#" class="myButtonClass">click to: Ride the Lightning</a></div>
+	<div class="headerFont" style="position: absolute;top:-160px;left:-140px;cursor:default;padding:150px;z-index:10;">&nbsp;portfolio</br><span class="headerFont3" style="font-size:150px;top:-100px;">&nbsp;2013</sapn></div>-->
+	
+	<!--<div id="test" style="background-color:#f0f;width:100px;top:200px;left:200px;position:absolute;padding:0px;border:1px solid red;z-index:30;">test</div>
+	<div id="empty" style="background-color:#0f0;width:100px;cursor:pointer;position:absolute;z-index:20;" onclick="toggle()">empty</div>-->
+	
+<div id="mainCont" style="border:0px solid red;position:absolute;z-index:100;width:100%;height:100%;text-align:center;vertical-align:middle;"><div id="main" style="border:0px solid blue;position:absolute;top:0px;left:px;width:1000px;height:680px;"> </div></div>
+
+<div id="jetBox" style="border:0px solid red;position:absolute;z-index:109;width:100%;height:100%;overflow:hidden;pointer-events:none;">
+<div id="jet" style="border:red solid 0px;position:absolute;z-index:110;top:-1580px;left:250px;pointer-events:none;"><img src="images/money_jet2_black_shadow.png" width="462px" height="472px" border="0"/></div></div>
+
+<div id="myDisplayDiv" style="border:red solid 0px;width:100%;height:100%;background:rgba(0,0,0,.8);position:absolute;z-index:200;opacity:0;display:none;">
+   <!--<div class="headerFont5" style="position: absolute;z-index:199;right:20px;top:20px;cursor:pointer;background:#6cb4f2;padding:30px;margin:20px;color:#fff;line-height: .7em;opacity:.3;margin-top:20px;padding-top:20px;" onmouseover='closeButtonRollOver(this)' onmouseout='closeButtonRollOut(this)' onclick='closeDisplay()'>x</div>-->
+  
+   <div id="displayContentBlock" style="position:relative;text-align:center; z-index:2;border:0px solid red;">asdasd</div>
+</div>
+
+
+</div>
+</div><!-- -->
+
+<div id="audioSpeak"></div>
+<script type="text/javascript">
+	setDivHeight();
+	drawThumbs();
+	
+	saySomething();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<items>
+  <item>
+    <filename>autodoc.jpg</filename>
+    <thumb>autodoc.jpg</thumb>
+    <title>Mobile App Design</title>
+    <content>Autodoc is an application designed to eliminate paperwork and streamline the documentation process between customers and auto-body shops by utilizing the latest mobile technology. This app assists auto body shops in gathering customer and job related info using virtually any mobile smart device. The web app system was developed using the latest web standards like HTML/CSS/JS to maintain the widest device support. It has three big features. It syncs data across all mobile devices and backs data up on a remote server. It can use mobile device camera hardware to associate vehicle images to a job profile similar to Instagram. And it has a robust digital legal document signing process that auto-propagates documents with the current customer and job profile data and lets the user send digitally signed docs to an email or printer. </content>
+    <audioPath>audio/autodoc.mp3</audioPath>
+    <date></date>
+    <linkPath>http://zuse.bz/Symfony/web/app.php/customer/</linkPath>
+  </item>
+ 
+ <item>
+    <filename>qolsys.jpg</filename>
+    <thumb>Qolsys.jpg</thumb>
+    <title>Design / Development / Editing</title>
+    <content>I was awarded a contract for creative services from the San Jose based start-up, Qolsys. I worked with the VP of Sales and Marketing and the Director of Marketing. I was responsible for the design and development of the front-end web product interface and the integration with a Salesforce.com back-end. The same interface remains consistent across Chrome / IE / Safari / Mozilla on PC / MAC / Android / and iOS. The project included a Photoshoot / Videoshoot with hair and make-up crew. I also completed two commercial edits and touched up photography for the website and three tradebooth tower banners. </content>
+    <audioPath>audio/qolsys.mp3</audioPath>
+    <date></date>
+    <linkPath>http://qolsys.com/</linkPath>
+  </item>
+ 
+  <item>
+    <filename>nov2.jpg</filename>
+    <thumb>ORG.jpg</thumb>
+    <title>Interface Design &amp; Development</title>
+    <content>This project is a simulator that was developed based on equations that could predict success given a set of variables. This turn-based simulation ran over the course of 8 quarters. The user was given ten account reps to manage and a “brick” with ten doctors to work with all dawning differing character statistics. The user had to allot time to their reps and doctors and had a number of rewards and incentives to divy up. The simulation was then calculated per quarter and feedback was given based on the results. This simulation was ultimately repurposed for two other major corporations to train their upper-management. I was the development lead on the original version and was responsible for both the design and development of the second two iterations. 
+</content>
+    <audioPath>audio/nov.mp3</audioPath>
+    <date></date>
+    <linkPath>http://jeffsmolinski.com/org/</linkPath>
+  </item>
+  
+  <item>
+    <filename>3D.jpg</filename>
+    <thumb>3D.jpg</thumb>
+    <title>3D Design &amp; Animation</title>
+    <content>Here are a few low and high poly objects that I've created in 3D. I have the ability to model pretty much anything, limited primarily by my hardware. I have the ability to rig these objects with armatures for animation to be used as special effects for film or to export MD5 objects for import into interactive 3D environments. I have managed to rig humanoid models with 3D motion capture data files to quickly achieve realistic movement with minor manual animation. Click the Up Arrow to veiw more of my 3D work on my Behanced profile.</content>
+    <audioPath>audio/3D.mp3</audioPath>
+    <date></date>
+    <linkPath>http://www.behance.net/JeffSmolinski</linkPath>
+  </item>
+  
+ <item>
+    <filename>flex.jpg</filename>
+    <thumb>flex2.jpg</thumb>
+    <title>Interactive Development</title>
+    <content>I was brought onto a team as the front-end developer for a handful of interactive marketing projects for Ford. I worked with a back-end developer, a designer, a content developer, and a 3D animator. The team made things very easy for me because all the components were created to my specification and all I had to do was sew things up and hand it off to the LMS driver. These projects were really special because we had a very talented and capable team. We were able to push the limits of the technology, make everything look and sound amazing, and load and run smoothly given to confines of the technology of our user-base at the time. This was the first time I had the opportunity to composite transparent 3D-rendered FLVs into a SWF and control their playback outside of a standard video player. </content>
+    <audioPath>audio/ford.mp3</audioPath>
+    <date></date>
+    <linkPath>http://jeffsmolinski.com/samples/Ford_Flex2/</linkPath>
+  </item>
+  <item>
+    <filename>am.jpg</filename>
+    <thumb>am.jpg</thumb>
+    <title>Interface Design</title>
+    <content>I was awarded the privilege of designing the interface for the Cisco AM Accelerate E-learning Training Environment. These course materials were available to around 50,000 users at the time. I had no direct contact with the client and I was led to understand that the client was actually a committee of deciders. It was a long process that went through about 5 different versions and 37 revisions. A little over a year later Cisco ended up contracting with me directly for a sales training course for their flagship product offering, Cisco Telepresence. I was able to complete the course to glowing reviews in 3 week and was rewarded with a nine month contract extension.</content>
+    <audioPath>audio/am.mp3</audioPath>
+    <date></date>
+    <linkPath>#</linkPath>
+  </item>
+  <item>
+    <filename>logos.jpg</filename>
+    <thumb>logos.jpg</thumb>
+    <title>Branding &amp; Identity Design</title>
+    <content>Here are a few examples of branding and logo identity work to show off a little design skill. Walker Wealth Management is pretty self explanatory. Pretty Sic was for a women’s surf apparel company. Defective Wear is a boutique e-commerce t-shirt collective. Bridget Holden is an independent hair stylist. ANYA is a short film about the tribulations of a young Russian woman. The yin yang snake is an emblem for a Chinese Medicine specialist. The “e” is short for “Enabled”, a small web design and development vendor.</content>
+    <audioPath>audio/logos.mp3</audioPath>
+    <date></date>
+    <linkPath>http://jeffsmolinski.com/images/LogoDesign.png</linkPath>
+  </item>
+  
+ 
+  <item>
+    <filename>jeo.jpg</filename>
+    <thumb>jeo.jpg</thumb>
+    <title>Interactive Development</title>
+    <content>This is an example of one of the more advanced interactive components that was custom-developed to supplement the multiple-choice testing sections of our e-learning courses. If you haven’t taken the training, you may find the questions difficult to answer. “Who Wants to Be a Millionaire” and “Mountain Adventure” were similar interactive games that were designed by colleagues and I was able to bring them to life. </content>
+    <audioPath>audio/jeo.mp3</audioPath>
+    <date></date>
+    <linkPath>http://jeffsmolinski.com/samples/Cisco_Jeopardy/</linkPath>
+  </item>
+  <item>
+    <filename>joyus.jpg</filename>
+    <thumb>joyus.jpg</thumb>
+    <title>Interactive Prototype Development</title>
+    <content>This interactive prototype was design and developed for the San Francisco-based women’s fashion start-up, Joyus. The project was created in a week using Actionscript 3. The intended use of this module was to be embedded on Facebook pages. It has an advanced video play-bar that dynamically tags items throughout the video via an external XML data file. The content bar on the right further showcases the currently focused items and would allow the user to add products to a virtual shopping cart without disturbing the playback of the video.</content>
+    <audioPath>audio/joyus.mp3</audioPath>
+    <date></date>
+    <linkPath>http://www.jeffsmolinski.com/work/JOYUS/</linkPath>
+  </item>
+  <item>
+    <filename>lionforce.jpg</filename>
+    <thumb>lion.jpg</thumb>
+    <title>Interactive Design and Development</title>
+    <content>Lionforce is a prefabricated home builder located in Texas. They wanted to allow their users to be able to interactively create the home of their dreams. I worked off a rough design from a colleague designer and developed a complete interface that allowed users to create and save profiles, select from several home types, customize their project using a versatile, custom-developed, accordion-style menu system, and finally, submit their home over email to a Lionforce representative. The three-level deep accordion nav was the cornerstone of the project. By selecting from lists of items, the site would display a composited 3D rendering of the proposed space and calculate the total cost and environmental LEED rating. I managed to set the site up with a static IP and an encrypted SSL layer for https protocol to obscure the data transmission. The user profiles were saved and loaded using PHP and a mySQL database.</content>
+    <audioPath>audio/lionforce.mp3</audioPath>
+    <date></date>
+    <linkPath>http://enabled.ws/work/lionforce/</linkPath>
+  </item>
+  
+   <item>
+    <filename>del.jpg</filename>
+    <thumb>roulette.jpg</thumb>
+    <title>Interactive Marketing Game</title>
+    <content>This short project was design by a Cincinnati-based agency and they asked me to make it work. You will notice that nothing about this project is “standard”. The user-interaction is a mouse click and drag motion that’s not on a straight path. The visual response lever has a similarly “non-standard” movement to it as well that is required to sync to the odd mouse movement. There are further levels of interactivity that occur that are mostly invisible to the user that are required to allow the interactivity to function smoothly to create a realistic interactive simulation of this real-world device. The seemingly random movement of the roulette ball and it’s ability to hop to a predetermined space and sync to audio to enhance the illustion were all fabricated in a matter of days in the old-school Flash AS2 language.</content>
+    <audioPath>audio/roulette.mp3</audioPath>
+    <date></date>
+    <linkPath>http://jeffsmolinski.com/samples/Del_Monte_Roulette/</linkPath>
+  </item>
+  
+  <item>
+    <filename>twc.jpg</filename>
+    <thumb>twc3.jpg</thumb>
+    <title>Interactive Training Module</title>
+    <content>This project is an example of a typical interactive stand-alone training course module. This layout is one of a three-module course each with a similar design but modified color coding. These course modules were packed with custom-developed interactivities like drag-and-drop content matching, click-to-reveal content like tips and tab structures, clever mouse activities, and audio narration with playback controls. Many of these courses were embedded in larger LMS systems and allowed the tracking of lesson completion and multiple-choice test scoring. </content>
+    <audioPath>audio/twc.mp3</audioPath>
+    <date>BroadwayDate</date>
+    <linkPath>http://jeffsmolinski.com/samples/Time_Warner_Cable/</linkPath>
+  </item>
+  
+  <item>
+    <filename>sim.jpg</filename>
+    <thumb>gameBoard.jpg</thumb>
+    <title>Interactive Boardgame Prototype</title>
+    <content>This interactive prototype was designed and developed to demonstrate the ability to mold dry training content into engaging interactive games. This interactive game board is intended to be combined with multiple-choice-style functionality to give the users a destination and lead them through a great deal of content seemingly mindlessly by rewarding the players with interactive stimuli.</content>
+    <audioPath>audio/game.mp3</audioPath>
+    <date>BroadwayDate</date>
+    <linkPath>http://jeffsmolinski.com/samples/ABR_Training_Demo/</linkPath>
+  </item>
+  
+  
+  <item>
+    <filename>neuro.jpg</filename>
+    <thumb>neuro.jpg</thumb>
+    <title>Interactive Site Design &amp; Development</title>
+    <content>I worked with the Head of Neurology at the University of California San Francisco on an interactive website for the Neurocritical Care Society. This site was developed to allow neurologists to share their processes with other personnel in a simple, visually intuitive manor. The site content is updatable via an external XML document that was formatted to match the output of a Visual Basic form to make creating new processes an easy task. The site has a custom-developed flowchart view that is very helpful when trying to navigate to a specific point in the process or to take in the whole picture. This architecture is currently used for thirteen different processes on the Neurocritical Care Society's website.</content>
+    <audioPath>audio/neuro.mp3</audioPath>
+    <date></date>
+    <linkPath>http://enls.mindframe.bz/</linkPath>
+  </item>
+ 
+  <item>
+    <filename>abr_sim.jpg</filename>
+    <thumb>ABR_CallSim.jpg</thumb>
+    <title>Interactive Training Simulation Prototype</title>
+    <content>I am responsible for the design and development of this interactive prototype. It was designed to be the next-generation of sales training simulators. It demonstrates Flash's ability to break out of the rectangular box layouts that still constrain HTML/CSS/JS standards. The game utilizes a "Choose Your Own Adventure" style XML-based storyline content structure that was externally update-able. The simulation demonstrates the ability to deploy audio recorded narration to enhance the training. Call’s enter the sales rep’s queue and each customer's issue must be dealt with through multiple choice responses. Every response affects the customer’s level of patience and the rep’s stats adjust accordingly as the sim progresses. Rep’s are rewarded for excellent service. </content>
+    <audioPath>audio/twc_proto.mp3</audioPath>
+    <date></date>
+    <linkPath>http://jeffsmolinski.com/samples/ABR_Call_Sim/</linkPath>
+  </item>
+  
+  
+</items>

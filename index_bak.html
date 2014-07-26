@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>smolinski</title>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+
+<script type='text/javascript' src='js/greensock/TweenMax.min.js'></script>
+<script type='text/javascript' src='js/greensock/easing/EasePack.min.js'></script>
+<script type='text/javascript' src='js/greensock/plugins/CSSPlugin.min.js'></script>
+
+
+<!--<script src="js/speak/speak.js-master/speakClient.js"></script>-->
+
+<link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+
+
+    
+<script>
+
+	function adjustMain() {
+		
+	  var height = $(window).height();
+	  var width = $(document).width();
+
+	  var tm2 = document.getElementById('main2');
+	  $("#main2").css({ left: '0px' });
+	  $("#main2").css({ top: '0px' });
+	  $("#main2").height(height);
+	  $("#main2").width(width);
+
+	  var tm3 = document.getElementById('main3');
+	  $("#main3").css({ left: '0px' });
+	  $("#main3").css({ top: '0px' });
+	  $("#main3").height(height);
+	  $("#main3").width(width);
+
+	  var tm4 = document.getElementById('main4');
+	  $("#main4").css({ left: '0px' });
+	  $("#main4").css({ top: '0px' });
+	  $("#main4").height(height);
+	  $("#main4").width(width);
+	  
+	};
+
+
+	function throwCoins(){
+
+		var total = 10;
+		var myDelay = 0;
+
+		for(var i=0;i<total;i++){
+
+			//console.log(myDelay);
+			throwCoin(i,myDelay);
+			myDelay += .1;
+		}
+	}
+
+	function throwCoin(num,myDelay){
+
+		var min = 0;
+		var max = window.innerWidth - 81;
+		// and the formula is:
+		var random = Math.floor(Math.random() * (max - min + 1)) + min;
+		var iDiv = document.createElement('div');
+		iDiv.id = 'coin'+num;
+		iDiv.className = 'coin';
+
+
+		//coinImage = new Image(); 
+		//coinImage.src = "images/coin.gif";
+		//iDiv.innerHTML = "";
+		iDiv.style.zIndex = num + 100;
+		document.getElementById('main2').appendChild(iDiv);
+
+		var coin = document.getElementById('coin'+num);
+		coin.style.left = window.innerWidth / 2 + 160 + 'px';
+		coin.style.bottom = window.innerHeight / 2 + -55 + 'px';
+		
+		coin.style.backgroundSize = '10px 10px';
+
+		TweenMax.to(coin,1 ,{css:{bottom:'0px'}, ease:Bounce.easeOut, delay:myDelay });
+		TweenMax.to(coin,1 ,{css:{left:random+'px',backgroundSize:'81px 81px'}, ease:Ease.easeOut, delay:myDelay});
+		TweenMax.to(coin,1 ,{css:{alpha:0}, ease:Ease.easeOut, delay:myDelay+1});
+		TweenMax.to(coin,1 ,{delay:myDelay+2, onComplete:removeCoin, onCompleteParams:[num]});
+
+
+	}
+
+	function removeCoin(num){
+
+		var obj = document.getElementById('coin'+num);
+
+		obj.parentNode.removeChild(obj);
+	}
+
+
+	$(window).resize(function() {
+	  adjustMain();
+	});
+
+	window.onload = function() {
+	    
+	    if( /Android|webOS|iPhone|iPad|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	    	//mobile coin animation block
+   		} else {
+   			//throwCoins();
+   		}
+
+
+	    $("#main2").on("swipeleft",function(){
+	    	changePage();
+		});
+
+		$("#cont").on("swipeleft",function(){
+	    	changePage();
+		});
+
+		adjustMain();
+
+
+		if( /Android|webOS|iPhone|iPad|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		
+			var conttt = document.getElementById('cont');
+			conttt.innerHTML = 'swipe for portfolio ><br/><br/>';
+			conttt.style.fontSize = '5em';
+
+		}
+
+
+		setBG();
+		
+	};
+
+
+	function changePage(){
+
+		var url = "http://jeffsmolinski.com/portfolio";
+    	window.location.replace(url);
+	  	//$.mobile.changePage( "portfolio", { transition: "slideleft"} );
+	}
+	
+	function slideRight(){
+		console.log("slide");
+		var temp = document.getElementById('main2');
+		
+		TweenMax.to(temp, 1, {css:{width:'0px'}, ease:Ease.easeOut, onComplete:changePage});
+	}
+
+
+
+
+    // bg stuff
+
+	function setBG(){
+
+
+		if (!allLoaded){
+			var newImg = new Image();
+
+			newImg.onload = function() {
+
+				var temp = document.getElementById('main3');
+				TweenMax.to(temp, 2,{css:{alpha:0}, ease:Back.easeOut, onComplete:setBGContinue });
+				
+			}
+			// load now
+			newImg.src = 'images/bg/' + bgArray[count];
+
+		} else {
+
+			var temp = document.getElementById('main3');
+			TweenMax.to(temp, 2,{css:{alpha:0}, ease:Back.easeOut, onComplete:setBGContinue });
+		}
+		
+	  	//throwCoins();
+		
+		
+	}
+
+	var allLoaded = 0;
+	var count = 0;
+	var bgArray = ['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg'];
+ 	var myIntVar = 0;
+
+	function setBGContinue() {
+		var height = $(window).height();
+  		var width = $(document).width();
+		var temp = document.getElementById('main3');
+		
+		$("#main3").css("background", "url(images/bg/" + bgArray[count] + ") no-repeat");
+		$("#main3").css("background-size", width+"px "+height+"px");
+	    //temp.css("opacity", "")
+
+	    temp.style.opacity = '0';
+
+	    TweenMax.to(temp, 1,{css:{alpha:.3}, ease:Back.easeOut});
+
+	    window.myIntVar = setInterval(function(){myTimer()},5000);
+	}
+
+	function myTimer() {
+	    //alert('weee');
+	    
+		console.log(bgArray[count]);
+	    count++;
+	    if(count > 5){
+	    	// all images loaded
+	    	allLoaded = 1;
+	    	count = 0;
+	    }
+	    
+	    clearInterval(window.myIntVar);
+
+	    setBG();
+
+	}
+	
+	// end bg stuff
+
+</script>
+    
+
+
+<style>
+.ui-loading .ui-loader { display: block; }
+.ui-loader { display: none; position: absolute; opacity: .85; z-index: 100; left: 50%; width: 200px; margin-left: -130px; margin-top: -35px; padding: 10px 30px; }
+
+#preload-01 {  }
+
+.coin {
+
+	position:absolute;
+	z-index:100;
+	display: inline-block;
+	left:0px;
+	bottom:1000px;
+	background: url(images/coin.gif) no-repeat 0px 0px;
+	width:81px;
+	height:81px;
+}
+
+#main2 {
+    
+    border:0px solid blue;
+    position:relative;
+    z-index:10;
+    display:inline-block;
+    background:rgba(255,255,255,0);
+    top:0px;
+    left:0px;
+    padding:0px;
+    margin:0px auto;
+    display:table-cell;
+    vertical-align:middle;/*width:100%;*/
+    opacity:1;
+    background-color:rgba(255,255,255,0);
+}
+
+#main3 {
+    
+    border:0px solid blue;
+	position:absolute;
+    z-index:9;
+    display:inline-block;
+    background:#fff;
+    top:0px;
+    left:0px;
+    padding:0px;
+    margin:0px auto;
+    display:table-cell;
+    vertical-align:middle;/*width:100%;*/
+    opacity:1;
+}
+
+#main4 {
+    
+    border:0px solid blue;
+    position:absolute;
+    z-index:8;
+    display:inline-block;
+    background:#fff;
+    top:0px;
+    left:0px;
+    padding:0px;
+    margin:0px auto;
+    display:table-cell;
+    vertical-align:middle;/*width:100%;*/
+    opacity:1;
+}
+
+.mainCont2 {
+    border:0px solid red;
+    position:relative;
+    text-align:center;
+    font-family: 'Yesteryear', cursive;
+    font-size:30px;
+    color:#000;
+    padding:20px;
+    margin:20px;
+    white-space: nowrap;
+    margin:0px auto;
+}
+
+a {
+	font-family: 'Yesteryear', cursive;
+    font-size:3em;
+    color:#000;
+    text-decoration: none;
+
+    -webkit-transition: color .5s ease-out;
+	-moz-transition: color .5s ease-out;
+	-ms-transition: color .5s ease-out;
+	-o-transition: color .5s ease-out;
+	transition: color .5s ease-out;
+
+	padding-left:30px;
+}
+
+a:hover {
+	color:#ccc;
+
+	-webkit-transition: color .5s ease-out;
+	-moz-transition: color .5s ease-out;
+	-ms-transition: color .5s ease-out;
+	-o-transition: color .5s ease-out;
+	transition: color .5s ease-out;
+}
+
+
+body {
+	
+    background-color:#fff;
+    margin:0 auto;
+    padding:0px;
+    height:100%;
+    max-height:100%;
+    
+    
+    
+
+}
+
+
+#mySlide {
+
+	cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div id="main3">
+	
+</div>
+<div id="main4">
+	
+</div>
+<div class='ui-loader ui-body-a ui-corner-all'><span class='ui-icon ui-icon-loading spin'></span><h1></h1></div>
+
+<div id="main2">
+	<div class="mainCont2" id="cont"><a id="mySlide" href="http://jeffsmolinski.com/portfolio" target="_self" >portfolio ></a><br/><br/></div>
+	<!--<div class="mainCont2" id="cont"><div id="mySlideClass" onmousedown="slideRight()">portfolio ></div><br/><br/></div>-->
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
