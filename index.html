@@ -206,16 +206,16 @@
 
 		var tempRand = randomIntFromInterval(20,55);
 		var tempRandSize = randomIntFromInterval(20,55);
-		var tempRandSpeed = randomIntFromInterval(1.5,3.5);
+		var tempRandSpeed = randomIntFromInterval(1.8,3);
 		ember.style.backgroundSize = tempRand+'px '+tempRand+'px';
 
 		//TweenMax.to(ember,1 ,{css:{bottom: randomBottom+'px'}, ease:Bounce.easeOut, delay:myDelay });
-		TweenMax.to(ember,tempRandSpeed ,{css:{left:(window.innerWidth+80)+'px'}, delay:myDelay, ease:Linear.easeNone,backgroundSize:tempRandSize+'px '+tempRandSize+'px' }); //,backgroundSize:'81px 81px'
+		TweenMax.to(ember,tempRandSpeed ,{css:{left:(window.innerWidth+80)+'px'}, delay:myDelay, ease:Power1.easeIn,backgroundSize:tempRandSize+'px '+tempRandSize+'px' }); //,backgroundSize:'81px 81px'
 		TweenMax.to(ember,tempRandSpeed ,{transformMatrix:{rotation: randomIntFromInterval(-100,100)} }); 
 		TweenMax.to(ember,.5 ,{css:{bottom:randomIntFromInterval(0,max/4)+'px'}, delay:myDelay, ease:Power1.easeInOut }); 
 		TweenMax.to(ember,.5 ,{css:{bottom:randomIntFromInterval(max/4,max/3)+'px'}, delay:myDelay+.5, ease:Power1.easeInOut }); 
 		TweenMax.to(ember,.5 ,{css:{bottom:randomIntFromInterval(max/3,max/2)+'px'}, delay:myDelay+1, ease:Power1.easeInOut }); 
-		TweenMax.to(ember,.5 ,{css:{bottom:randomIntFromInterval(max/2,max)+'px'}, delay:myDelay+1.5, ease:Power1.easeInOut }); 
+		TweenMax.to(ember,1 ,{css:{bottom:randomIntFromInterval(max/2,max+100)+'px'}, delay:myDelay+1.5, ease:Power1.easeInOut }); 
 		TweenMax.to(ember,1 ,{delay:myDelay+10, onComplete:removeEmber, onCompleteParams:[num]});
 
 		// sweet
