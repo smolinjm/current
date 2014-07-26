@@ -54,6 +54,9 @@
 	  $("#main6").height(height);
 	  $("#main6").width(width);
 
+	  $("#main7").height(height);
+	  $("#main7").width(width);
+
 	  $("#myCanvas").css({ "left": (width/2-250)+'px' });
 	  $("#myCanvas").css({ "top": (height/2-255)+"px" });
 	
@@ -166,14 +169,14 @@
 
 	function throwEmbers(){
 
-		var total = 10;
+		var total = randomIntFromInterval(5,20);
 		var myDelay = 0;
 
 		for(var i=0;i<total;i++){
 
 			//console.log(myDelay);
 			throwEmber(i,myDelay);
-			myDelay += .3;
+			myDelay += .05 + randomIntFromInterval(0,1);
 		}
 	}
 
@@ -183,7 +186,7 @@
 		var max = window.innerHeight - 75;
 		// and the formula is:
 		//var random = Math.floor(Math.random() * (max - min + 1)) + min;
-		var randomBottom = Math.floor(Math.random() * (max - 10 + 1)) + min;
+		var randomBottom = randomIntFromInterval(0,max); //Math.floor(Math.random() * (max - 10 + 1)) + min;
 		var iDiv = document.createElement('div');
 		iDiv.id = 'ember'+num;
 		iDiv.className = 'ember';
@@ -197,14 +200,22 @@
 		document.getElementById('main7').appendChild(iDiv);
 
 		var ember = document.getElementById('ember'+num);
-		ember.style.left = 0+'px'; //window.innerWidth / 2 + 160 + 'px';
-		ember.style.bottom = window.innerHeight / 2 + -35 + 'px';
+		ember.style.left = -80+'px'; //window.innerWidth / 2 + 160 + 'px';
+		ember.style.bottom = window.innerHeight / 4 + 'px';
 		
-		ember.style.backgroundSize = '75px 75px';
+
+		var tempRand = randomIntFromInterval(20,55);
+		var tempRandSize = randomIntFromInterval(20,55);
+		var tempRandSpeed = randomIntFromInterval(1.5,3.5);
+		ember.style.backgroundSize = tempRand+'px '+tempRand+'px';
 
 		//TweenMax.to(ember,1 ,{css:{bottom: randomBottom+'px'}, ease:Bounce.easeOut, delay:myDelay });
-		TweenMax.to(ember,1 ,{css:{left:window.innerWidth+'px'}, ease:Ease.easeOut, delay:myDelay}); //,backgroundSize:'81px 81px'
-		TweenMax.to(ember,4 ,{css:{alpha:0}, ease:Ease.easeOut, delay:myDelay+4});
+		TweenMax.to(ember,tempRandSpeed ,{css:{left:(window.innerWidth+80)+'px'}, delay:myDelay, ease:Linear.easeNone,backgroundSize:tempRandSize+'px '+tempRandSize+'px' }); //,backgroundSize:'81px 81px'
+		TweenMax.to(ember,tempRandSpeed ,{transformMatrix:{rotation: randomIntFromInterval(-100,100)} }); 
+		TweenMax.to(ember,.5 ,{css:{bottom:randomIntFromInterval(0,max/4)+'px'}, delay:myDelay, ease:Power1.easeInOut }); 
+		TweenMax.to(ember,.5 ,{css:{bottom:randomIntFromInterval(max/4,max/3)+'px'}, delay:myDelay+.5, ease:Power1.easeInOut }); 
+		TweenMax.to(ember,.5 ,{css:{bottom:randomIntFromInterval(max/3,max/2)+'px'}, delay:myDelay+1, ease:Power1.easeInOut }); 
+		TweenMax.to(ember,.5 ,{css:{bottom:randomIntFromInterval(max/2,max)+'px'}, delay:myDelay+1.5, ease:Power1.easeInOut }); 
 		TweenMax.to(ember,1 ,{delay:myDelay+10, onComplete:removeEmber, onCompleteParams:[num]});
 
 		// sweet
@@ -235,7 +246,9 @@
 		TweenMax.to(temp, 1, {css:{width:'0px'}, ease:Ease.easeOut, onComplete:changePage});
 	}
 
-
+	function randomIntFromInterval(min,max) {
+	    return Math.floor(Math.random()*(max-min+1)+min);
+	}
 
 
     // bg stuff - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -287,6 +300,13 @@
 
 	function resetBG() {
 
+		if( /Android|webOS|iPhone|iPad|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	    	//mobile coin animation block
+   		} else {
+   			throwEmbers();
+   		}
+
+
 		var height = $(window).height();
   		var width = $(document).width();
 		
@@ -329,7 +349,7 @@
 	    if( /Android|webOS|iPhone|iPad|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 	    	//mobile coin animation block
    		} else {
-   			throwEmbers();
+   			//throwEmbers();
    		}
 
 
@@ -400,8 +420,8 @@
 	
 	position:absolute;
 	display: inline-block;
-	left:0px;
-	top:0px;
+	left:-100px;
+	bottom:-100px;
 	width:75px;
 	height:75px;
 	background: url(images/ember.png) no-repeat 0px 0px;
@@ -481,7 +501,7 @@
     
     z-index:11;
     
-    border:1px solid blue;
+    border:0px solid blue;
     position:absolute;
     display:inline-block;
     top:0px;
@@ -491,6 +511,8 @@
     display:table-cell;
     vertical-align:middle;/*width:100%;*/
     opacity:1;
+    overflow: hidden;
+
 }
 
 
